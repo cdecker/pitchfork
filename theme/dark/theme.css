@@ -1,0 +1,159 @@
+/* top right bottom left */
+body {
+	font-size: 12.0px;
+	font-family: "Bitstream Vera Sans","Verdana";
+	background-color: #0a0b0e;
+}
+
+select, input, a, body {
+	color: #eee;
+}
+
+select, input {
+	font-size: 0.95em;
+	line-height: 1.2em;
+	background: #111111;
+	border: 1px solid #333333;
+}
+
+.main_container {
+	border: 1px solid #e2e2e2;
+	background: #0a0b0e;
+}
+
+div.moving_box {
+	background-color: #808080;
+	border: 1px solid #65869E;
+}
+
+li[dirtype=file] { background-image: url(images/audio_li.png); }
+li[dirtype=directory] { background-image: url(images/folder_li.png); }
+li[dirtype=artist] { background-image: url(images/media-artist_li.png); }
+li[dirtype=album] { background-image: url(images/media-album_li.png); }
+li[dirtype=playlist] { background-image: url(images/playlist_li.png); }
+
+/* used to select the filename */
+li[btype=search] > span {
+	color: #999;
+}
+
+
+div.slider_pointer {
+        border:		1px solid #333333;
+        background-color: #305050;
+}
+
+[slider_moving] {
+	cursor: move;
+}
+
+img.act_button {
+	height: 25px;
+	width: 25px;
+	opacity: 0.70;
+}
+img.act_button:hover {
+	opacity: 1.0;
+}
+
+hr.server_settings {
+	color: #333333;
+	background-color: #333333;
+}
+
+div.overlay, div.selection_menu, #status_bar, div.slider_main,
+div#pagination, div#pagination_options, input#quickadd
+{
+	border: 1px solid #333333;
+	background-color: #111111;
+}
+
+div.settings_container, div.settings_header, 
+div#qa_suggestions, div#sidebar_header,
+div#streaming_display, div.player_control,
+div.popup
+{
+	border: 1px solid #333333;
+	background-color: black; 
+}
+
+div.settings_header {
+	border-bottom: 0px;
+}
+
+input#quickadd {
+	font-size: 12px;
+	color: #999;
+}
+input#quickadd:hover, input#quickadd:focus {
+	background-color: black;
+	color: #eee;
+}
+
+div.big_albumart {
+	background-color: black;
+}
+
+div#sidebar_header {
+	font-size: 0.8em;
+}
+
+div#sidebar_display {
+	border: 1px solid black;
+	background-color: #111111;
+	border: 1px solid #333333;
+	font-size: 0.992em;
+	line-height: 1.3em;
+}
+
+/* for browser action buttons */
+
+/* match add buttons */
+li.browser_button_add {
+	background: url(images/add_15.png) no-repeat top left;
+}
+
+/* current page on the pagination list */
+li[cpage] {
+	background-color: #800000;
+}
+
+span.plse {
+	background-image: url(images/audio_li.png);
+}
+
+span.plse:hover,
+ul.recommended > li > ul > li:hover ,
+[selected],
+li.menuitem:hover,
+#streaming_display li:hover,
+span.qa_element[qa_selected]
+{
+	background-color: #333333; 
+}
+
+li.playlist_popup, 
+span.playlist_popup, 
+ul#pagination_list > li,
+.browse_type,
+ul.browser_field,
+#playlist 
+{
+	border: 1px solid #333333;
+}
+
+li.menuitem {
+	border: 1px solid #555555;
+	border-top: none;
+	background: #111111;
+}
+
+tr.playlist {
+	border: 0px;
+}
+
+tr.moving {
+	border-top: 1px solid #b0bdec;
+	color: gray;
+}
+

@@ -1,0 +1,53 @@
+Installation instructions
+
+1. Put either the pitchfork.conf or pitchfork_domain.conf file, found in this doc/ directory,
+   in /etc/http/conf.d (or where your extra config-files are) 
+   and make sure they specify the correct directories for pitchfork.
+2. Apache needs to have write access to the config directory: 
+   - Go to where you installed pitchfork
+   - chown apache config (or whatever user apache is run as, can be 'nobody')
+     to find out who the apache-user is check output from "ps auxww | grep httpd || ps auxww|grep apache"
+3. Reload/restart apache
+4. Open your web-browser to where you installed apache and answer the questions ;)
+
+Apache access logs
+The client by default requests information every second from the server, this means that a lot of 
+stuff will end up in your access log. To disable logging of the these requests you will have to 
+change the CustomLog directive in apache. It should be sufficient to add env=!pitchforknolog after it 
+(if you have used the given .conf file)
+
+Example customlog directive:
+CustomLog logs/access_log combined env=!pitchforknolog
+
+For more information about logs: 
+http://httpd.apache.org/docs/2.0/logs.html#accesslog
+
+Required PHP-Modules:
+Usually shipped with the php-distribution, but listed here for modular php-implementations.
+ - Hash
+ - SimpleXML
+ - JSON (not required, but highly recommended)
+
+
+When you have problems: 
+
+ * apache refuses to start and you see "invalid command php_flag"
+ * The only thing you see is some PHP-code
+ 	- You have to enable PHP in httpd.conf, make sure you have 
+	"LoadModule php5_module modules/libphp5.so" somewhere in the config file
+
+ * All you see is a blank page OR
+ * Warning: require_once(PEAR/Exception.php) [function.require-once]: 
+     failed to open stream: No such file or 
+     directory in <something>/pitchfork/inc/Net/MPD.php
+        - You need to install php-pear (might also be called PEAR-PEAR)
+ 
+ * Allowed memory size of .. bytes exhausted in apache error log
+ 	- You need to increase the allowed memory size in php.ini, 
+	  set memory_limit to at least 64M
+ 
+ * No metadata (ie. images/lyrics/etc) is showing
+ 	- make sure allow_url_fopen is set to on in php.ini and that the config/ directory 
+	  is writeable by apache
+
+

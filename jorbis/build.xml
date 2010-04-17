@@ -1,0 +1,44 @@
+<project name="jorbis-pitchfork" basedir="." default="all">
+
+	<!--
+		run "ant jar" to create the needed jar
+		To sign it you'll need a selfsigned certificate, see seperate 
+		comment about that
+	-->
+	<property name="source" value="src"/>
+	<property name="build" value="build"/>
+	<property name="classes" value="${build}/classes"/>
+	<property name="jarfile" value="jorbis-pitchfork.jar"/>
+
+	<target name="clean">
+	    <delete dir="${build}"/>
+	</target>
+
+	<target name="compile">
+		<mkdir dir="${classes}"/>
+		<javac srcdir="${source}" destdir="${classes}"/>
+	</target>
+
+	<target name="jar" depends="compile">
+
+		<jar destfile="jorbis-pitchfork.jar" basedir="${classes}">
+			<manifest>
+				<attribute name="Main-Class" value="JorbisPlayer"/>
+			</manifest>
+		</jar>
+	</target>
+
+
+	<!-- To create your own certificate: 
+		keytool -genkey -alias pitchfork -validity 3650
+		keytool -selfcert -alias pitchfork -validity 3650
+	-->
+	<target name="signjar" depends="jar">
+		<signjar storepass="secret" jar="${jarfile}" alias="pitchfork">
+		</signjar>
+	</target>
+
+	<target name="all" depends="clean,compile,jar,signjar">
+	</target>
+
+</project>

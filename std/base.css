@@ -1,0 +1,520 @@
+body {
+	line-height: 19.2px;
+}
+
+a {
+	text-decoration: none;
+}
+
+tr, td, #disp_artist, #disp_album, #disp_info, p.disp, img.thumbnailart {
+	padding: 0px;
+	margin: 0px;
+}
+
+.main_container {
+	padding-left: 5px;
+	padding-bottom: 10px; 
+}
+
+#playlist {
+	line-height: 1em;
+	table-layout: fixed;
+	font-size: 0.99em;
+	border-width: 0px;
+	border-spacing: 0px;
+	cursor: default;
+}
+
+/* for konqueror */
+.pltemp {
+	color: #000001;
+}
+
+/* apply to td's in tr's following an element with id playlist */
+#playlist > tr > td { 
+	white-space: nowrap;
+	height: 1.3em;
+	border-width: 0px;
+	padding-left: 2px;
+}
+
+#content {
+	margin-left: 48px; 
+	margin-top: 106px;
+	position: relative;
+}
+
+/* this is complicated */
+ul.browser_field {
+	cursor: default;
+	font-size: 96%;
+	width: 30%; /* as small as possible */
+	line-height: 1.2em;
+	padding: 0px 0px 0px 3px;
+	margin: 2px 3px 0px 5px;
+	overflow: auto;
+	/*border: 1px solid #9db2b1;*/
+	float: left;
+}
+li {
+	/*padding: 0px 0px 0px 3px;*/
+	margin: 0px;
+}
+li[dirtype] {
+	background-position: top left;
+	background-repeat: no-repeat;
+	padding-left: 18px;
+}
+
+li[dirtype=parent] {
+	padding-left: 4px;
+}
+
+li[btype=search] {
+	padding-bottom: 7px;
+}
+
+li[btype=search]:last-child {
+	padding-bottom: 0px;
+}
+
+#posslider, #volslider {
+	width: 150px;
+}
+
+div.slider_main {
+	width: 100%;
+	height: 10px;
+	padding: 0px;
+	margin: 0px 5px 5px 5px;
+}
+div.slider_pointer {
+	position: relative;
+	left: 0px;
+	width: 5px;
+	height: 15px;
+	margin: -5px -5px 0px -5px;
+	padding: 0px 0px 5px 0px;
+}
+p.slider_txt {
+	margin: 0px 0px 0px 10px; 
+	cursor: default;
+}
+
+#disp_title {
+	font-size: larger;
+	padding: 0px;
+	margin: 15px 2px 0px 0px ;
+}
+
+div.overlay {
+	position: absolute;
+	padding: 10px;
+	display: none;
+}
+
+img.close {
+	position: absolute;
+	height: 15px;
+	width: 15px;
+	right: 5px;
+	top: 5px;
+	opacity: 0.85;
+}
+
+img.menu_button {
+	height: 30px;
+	width: 30px;
+	opacity: 0.80;
+	display: inline;
+}
+#debugbox {
+	position: fixed;
+	right: 0px;
+	bottom: 0px;
+	height: 200px;
+	width: 150px;
+	overflow: auto;
+	z-index: 100;
+	padding-left: 5px;
+	border: 1px solid #FFCC00;
+	background: #FFFF99;
+	color: black;
+}
+
+img.diritem {
+	height: 15px;
+	width: 15px;
+	position: relative;
+	right: 2px;
+}
+div.player_control {
+	position: fixed;
+	left: 3px;
+	right: 3px;
+	top: 0px;
+	padding: 0px 10px 0px 10px;
+	height: 101px;
+	z-index: 2;
+}
+div.pc_artist {
+	width: 400px;
+	left: 90px;
+	position: absolute;
+	padding-top: 5px;
+}
+div#albumart {
+	width: 80px;
+	height: 80px;
+	/*border: 1px solid red;*/
+	margin: 5px 10px 0px 0px;
+	float: left;
+}
+div.pc_ci {
+	position: absolute;
+	top: 25px;
+	left: 500px;
+}
+div.pc_sliders {
+	position: absolute;
+	left: 610px;
+	top: 2px;
+}
+div.selection_menu {
+	position: fixed;
+	top: 106px;
+	left: 3px;
+	width: 40px;
+	padding: 10px 0px 5px 5px;
+}
+#status_bar {
+	position: fixed;
+	left: 300px;
+	width: 300px;
+	top: 0px;
+	display:none;
+	height: 25px;
+	z-index: 10;
+}
+#status_bar_txt {
+	margin: 0px;
+	padding: 0px 2px 0px 5px;
+}
+img.status_working {
+	float: right;
+	margin: -15px 5px 0px 0px;
+	padding: 0px 2px 0px 5px;
+	display: none;
+}
+img.status_working[working] {
+	display: inline;
+}
+
+div.pc_other {
+	position: absolute;
+	right: 4px;
+	top: 0px;
+	font-size: smaller;
+	line-height: 13px;
+}
+
+hr.server_settings {
+	height: 0px;
+	margin-left: -5px; 
+	margin-right: 0px;
+}
+div.pc_settings {
+	position: absolute;
+	left: 615px;
+	top: 80px;
+	z-index: 5;
+	height: 20px;
+	font-size: 0.97em;
+}
+div.settings_header {
+	cursor: pointer;
+	margin: 0px 0px 0px 0px;
+	width: 152px;
+}
+div.settings_container {
+	display: none;
+	height: 200px;
+	top: 21px;
+	z-index: 5;
+	position: absolute;
+	width: 152px;
+}
+
+img.server_settings {
+	margin-bottom: -3px;
+}
+span.server_settings {
+	cursor: default;
+}
+.nomargin {
+	margin: 0px;
+}
+.nopadding {
+	padding: 0px;
+}
+p#settings_content {
+	margin: 0px;
+	padding-left: 5px;
+}
+
+input#quickadd {
+	margin: 0px 0px 0px -10px;
+	height: 13px;
+	width: 105px;
+}
+
+div#qa_suggestions {
+	margin: -3px 0px 0px -10px;
+	padding: 0px; 
+	min-width: 220px;
+	z-index: 100;
+	position: absolute;
+	display: none; /* yeah I want it, but I don't want *you* to see it! :p */
+	min-height: 15px;
+}
+p#qa_suggestions_txt {
+	padding: 0px;
+	margin: 0px;
+	font-size: 12px;
+	line-height: 1.3em;
+}
+
+span.qa_element {
+	display: block;
+}
+
+img.thumbnailart:hover {
+	cursor: pointer;
+}
+
+div.big_albumart {
+	position: fixed;
+	margin: auto;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	top: 0px;
+	width: 200px;
+	height: 50px;
+	padding: 10px;
+	z-index: 15;
+}
+img.big_albumart {
+	margin: auto;
+}
+div#sidebar_header {
+	top: 104px;
+	position: fixed;
+	display: none;
+	height: 20px;
+	width: 290px;
+	right: 3px;
+	z-index: 1;
+	padding: 0px 0px 0px 5px;
+}
+div#sidebar_display {
+	top: 127px;
+	display: none;
+	position: fixed;
+	right: 3px;
+	padding: 10px 5px 5px 10px;
+	max-width: 500px;
+	min-width: 280px;
+	overflow: auto;
+	bottom: 0px;
+	z-index: 1; 
+}
+
+#lyrics_refetch_button {
+	position: absolute;
+	right: 5px;
+	font-size: 0.95em;
+	margin: 0px; 
+}
+
+.fakelink {
+	cursor: pointer;
+}
+
+p.right_small {
+	text-align: right;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 5px 0px 0px;
+}
+p.browse_type {
+	display: inline;
+	margin: 0px 2px 0px 2px;
+	padding: 0px 5px 0px 5px;
+	cursor: default;
+}
+
+ul#browser_act_buttons {
+	width: 95%;
+	clear: both;
+	padding: 0px;
+	margin: 0px 0px 0px 10px;
+}
+
+li.browser_button_add {
+	margin: 0px;
+	padding: 0px;
+	display: inline;
+	padding-left: 15px;
+	z-index: 20; 
+}
+
+/* only allow changing pos if not first elem */
+li.browser_button_add + li {
+	position: relative;
+}
+
+li.browser_button_add:hover {
+	cursor: default;
+}
+
+/* playlist hover, not the main playlist, playlists in the browser */
+div.playlist_hover {
+	display: none;
+	float: right;
+}
+
+li:hover div.playlist_hover {
+	color: red;
+	display: inline;
+}
+
+div.popup {
+	position: absolute;
+	margin-top: -10px;
+	z-index: 10;
+	padding: 2px 5px 5px 5px;
+	display: none;
+	cursor: default;
+}
+
+.fullscreen {
+	position: fixed;
+	left: 0px;
+	top: 0px; 
+	z-index: 20;
+	background-color: red;
+}
+
+ul.playlist_popup {
+	margin: 0px;
+	padding: 2px;
+}
+li.playlist_popup {
+	display: inline;
+	margin-right: 2px;
+	cursor: pointer;
+}
+span.playlist_popup {
+	cursor: pointer;
+	margin: 2px;
+}
+
+div.moving_box {
+	position: relative;
+	overflow: hidden;
+	font-size: 0.96em;
+	cursor: move;
+}
+
+div#streaming_display {
+	position: absolute;
+	top: 2px;
+	margin: 0px;
+	padding: 0px;
+	right: 120px;
+	width: 80px;
+	line-height: 13px;
+}
+
+div#streaming_display li {
+	list-style-type: none;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+div#pagination, div#pagination_options {
+	position: fixed;
+	bottom: 0px; 
+	left: 50px; 
+	height: 25px;
+	padding: 0px;
+	cursor: default;
+	max-width: 680px;
+	display: none;
+}
+div#pagination_options {
+	left: 3px; 
+	width: 47px;
+	display: block;
+}
+ul#pagination_list {
+	padding: 0px; 
+	margin: 4px 0px 2px 2px; 
+	overflow: hidden; 
+}
+ul#pagination_list > li { /* li following pagination ul */
+	display: inline;
+	width: 10px; 
+	margin: 2px;
+	cursor: pointer;
+}
+
+/* just a spacer at the bottom to avoid last row 
+ * disappearing under the pagination list */
+div#pagination_spacer {
+	height: 25px;
+}
+
+img.pagination_options {
+	margin: 4px 0px 0px 2px;
+	padding: 0px;
+	cursor: pointer;
+	opacity: 0.80;
+}
+
+span.plse {
+	display: block;
+	line-height: 110%;
+	cursor: pointer;
+	padding-left: 20px;
+	background-position: top left;
+	background-repeat: no-repeat;
+}
+
+li.menuitem {
+	list-style-type: none;
+	padding-left: 4px;
+	padding-right: 4px;
+	border-top: none;
+}
+
+
+ul.recommended {
+	padding-left: 10px;
+}
+
+ul.recommended > li {
+	cursor: pointer;
+}
+
+ul.recommended > li > ul {
+	padding-left: 15px;
+	display: none;
+}
+ul.recommended > li[open] > ul {
+	display: block;
+}
+
+img.menu_button:hover, img.close:hover, img.pagination_options:hover {
+	opacity: 1.0;
+}

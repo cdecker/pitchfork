@@ -1,0 +1,405 @@
+/*
+	Site: Thexy Theme v1.0
+	Date: Jan 12, 2008
+	Author: Gianni Chiappetta
+	Website: www.runlevel6.org
+	E-Mail: gianni@runlevel6.org
+	Description: base style sheet
+	Author Notes:	
+	
+*/
+
+/************/
+/* ELEMENTS */
+/************/
+
+body {
+	color: #000;
+	background: #e8e8e8 url(images/bkg.jpg) left top repeat-x fixed;
+	font-family: "Bitstream Vera Sans","Verdana";
+	text-decoration: none;
+	word-spacing: Normal;
+	text-align: left;
+	letter-spacing: 0;
+	text-indent: 0px;
+	line-height: 14px;
+	font-size: 13px;
+}
+
+a:link { text-decoration: none; color: #000; }
+a:visited { text-decoration: none; color: #000; }
+a:hover { text-decoration: none; color: #7d7d7d; }
+a:active { text-decoration: none; color: #000; }
+
+a img { border: 0; }
+
+hr { padding: 0 !important; }
+
+/*------------------------- Player Control -------------------------*/
+#player_control {
+	position: fixed;
+	background: #e8e8e8 url(images/bkg.jpg) left top repeat-x fixed;
+	top: 0px;
+	left: 0px;
+	margin: 0;
+	padding: 0 0 0 0;
+	height: 125px;
+	width: 100%;
+	overflow: visible;
+}
+
+/* Status Bar */
+#status_bar {
+	top: 95px;
+	left: 155px;
+	display: block;
+	height: auto;
+	padding: 0;
+	width: 372px;
+	text-align: left;
+	font-size: 10px;
+}
+
+/* Album Art */
+#player_control #albumart {
+	margin: 25px 25px 25px 0;
+	padding: 0;
+	float: right;
+}
+
+#player_control .thumbnailart {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+#albumart_show p.fakelink {
+	display: block !important;
+	height: 16px !important;
+	width: 16px !important;
+	text-indent: -9999px;
+	background: transparent url(images/fileclose.png) top left no-repeat;
+}
+
+/* LCD */
+#player_control div.pc_artist {
+	top: 0px;
+	left: 150px;
+	margin: 0;
+	padding: 20px 10px;
+	width: 382px;
+	height: 105px;
+	background: transparent url(images/lcd.jpg) top left no-repeat;
+}
+
+#player_control div.pc_artist p {
+	margin: 0;
+	padding: 0 0 10px 0;
+}
+
+/* Controls */
+#player_control div.pc_ci {
+	top: 20px;
+	left: 14px;
+	width: 122px;
+	height: 125px;
+	/*background: transparent url(images/control_bkg.jpg) top left no-repeat;*/
+	overflow: visible;
+}
+
+#player_control div.pc_ci > div.nomargin {
+	position: fixed !important;
+}
+
+#player_control div.pc_ci .act_button {
+	margin: 0 !important;
+	padding: 0 !important;
+	height: 32px !important;
+	float: left;
+}
+
+#player_control div.pc_ci #previous_button, #player_control div.pc_ci #stop_button, #player_control div.pc_ci #next_button {
+	width: 31px !important;
+}
+
+#player_control div.pc_ci #pp_button {
+	width: 29px !important;
+}
+
+#player_control div.pc_ci #previous_button:hover, #player_control div.pc_ci #stop_button:hover, #player_control div.pc_ci #pp_button:hover, #player_control div.pc_ci #next_button:hover { opacity: 0.7; }
+
+/* Bitrate */
+#player_control div.pc_ci #disp_info {
+	display: block;
+	margin: 65px 0 0 0;
+	padding: 10px;
+	width: 520px;
+	text-align: right;
+	font-size: 10px;
+}
+
+/* Quick Add */
+#player_control div.pc_ci #quickadd {
+	left: 15px;
+	width: 110px;
+	height: 15px;
+	border: 1px solid #707070;
+	padding: 5px;
+	margin: -80px 0 0 0 !important;
+	-moz-border-radius: 4px;
+	-khtml-border-radius: 4px;
+	line-height: 14px;
+	font-size: 13px;
+	vertical-align: middle;
+}
+
+#player_control div.pc_ci #qa_suggestions {
+	margin: -34px 0 0 0;
+	padding: 5px 0;
+	border: 1px solid #707070;
+	background-color: #FFF;
+	-moz-border-radius-bottomleft: 4px;
+	-moz-border-radius-bottomright: 4px;
+	-moz-border-radius-topright: 4px;
+	-khtml-border-radius-bottomleft: 4px;
+	-khtml-border-radius-bottomright: 4px;
+	-khtml-border-radius-topright: 4px;
+	line-height: 14px;
+	font-size: 13px;
+}
+
+span.qa_element { padding: 5px; }
+span.qa_element[qa_selected] {  background-color: #e8e8e8; }
+
+/* Sliders */
+#player_control div.pc_sliders {
+	top: 0px;
+	left: 572px;
+}
+
+#player_control div.pc_sliders > div {
+	margin-top: 15px;
+}
+
+#player_control div.pc_sliders .slider_txt {
+	padding: 5px 0 10px 0;
+}
+
+#player_control div.pc_sliders .slider_main {
+	height: 10px !important;
+	background-color: #666;
+	-moz-border-radius: 5px;
+	-khtml-border-radius: 5px;
+}
+
+div.slider_pointer {
+	width: 15px;
+	height: 10px;
+	background: transparent url(images/slider.png) top left no-repeat;
+	cursor: pointer;
+}
+
+[slider_moving] {
+	cursor: move;
+}
+
+/* Media */
+div.selection_menu {
+	top: 140px;
+	left: 0px;
+	margin: 0;
+	padding: 0;
+	width: 150px;
+}
+
+#player_control div.selection_menu .menu_button, img.menu_button {
+	display: block !important;
+	margin: 0 auto 5px auto;
+	width: 128px !important;
+	height: 34px !important;
+}
+
+/* Tools */
+#player_control div.pc_other {
+	top: 265px;
+	left: 0px;
+	margin: 0;
+	width: 150px;
+	padding: 30px 0 0 20px;
+	background: transparent url(images/tools_bkg.jpg) top left no-repeat;
+}
+
+#player_control div.pc_other li, li.menuitem {
+	padding: 3px 0;
+	list-style-type: none;
+	line-height: 14px;
+	font-size: 13px;
+}
+
+div.popup {
+	margin: 0 0 0 50px !important;
+	padding: 5px;
+	background-color: #e8e8e8;
+	border: 1px solid #707070;
+	width: 300px;
+}
+
+div.popup:hover { color: #000; }
+
+/* Settings */
+#player_control div.pc_settings {
+	top: 280px;
+	left: 0px;
+	margin: 0 !important;
+	padding: 0 !important;
+	width: 150px;
+}
+
+#settings_header p {
+	padding: 0 0 0 20px !important;
+	margin: 0 !important;
+}
+#settings_header p:hover { color: #7d7d7d; }
+
+#settings_container {
+	background-color: #e8e8e8;
+	margin: 0 !important;
+	padding: 0 !important;
+	overflow: visible !important;
+	width: 149px !important;
+}
+
+#settings_content {
+	background: transparent url(images/content_bkg.jpg) top left repeat-x !important;
+	width: 145px !important;
+	margin: -5px 0 0 0 !important;
+	padding: 0 0 5px 6px !important;
+	font-size: 13px !important;
+	line-height: 14px !important;
+}
+
+.server_settings {
+	padding: 3px 0;
+	cursor: pointer;
+}
+
+/* Streaming */
+#streaming_display {
+	margin: 15px 0 0 0 !important;
+	padding: 0 !important;
+	width: 100px !important;
+}
+
+#streaming_display li {
+	padding: 3px 0;
+	list-style-type: none;
+	line-height: 14px;
+	font-size: 13px;
+}
+
+/* Content */
+#content {
+	position: absolute !important;
+	top: 125px !important;
+	left: 151px !important;
+	margin: 0 !important;
+	padding: 15px 0 0 0 !important;
+	/*background: transparent url(images/content_bkg.jpg) top left repeat-x fixed !important;*/
+	border-left: 1px solid #acacac !important;
+}
+
+tr[playing] { color: #FFF; background-color: #66BBCC; border-top: 1px solid #33BBCC; border-bottom: 1px solid #33BBCC; }
+ul.browser_field li[selected], tr[selected] { color: #FFF; background-color: #BBB; }
+
+/* Browser */
+.overlay {
+	top: 125px !important;
+	left: 151px !important;
+	margin: 0 !important;
+	padding: 15px 0 0 0 !important;
+	position: fixed;
+	background: transparent url(images/browse_bkg.png) top left repeat-x !important;
+	border-right: 1px solid #acacac !important;
+	border-left: 1px solid #acacac !important;
+}
+
+p.browse_type, input.browse_type, select.browse_type {
+	border: 1px outset #666;
+	cursor: pointer;
+	background-color: transparent;
+}
+input.browse_type { cursor: text; }
+
+span.plse { padding: 2px 0 2px 18px; }
+ul.browser_field li { background: transparent left middle no-repeat !important; padding: 3px 0 3px 18px !important; cursor: pointer; }
+span.plse[dirtype=file], li[dirtype=file] { background-image: url(images/file.png); }
+span.plse[dirtype=directory], li[dirtype=directory] { background-image: url(images/directory.png); }
+span.plse[dirtype=artist], li[dirtype=artist] { background-image: url(images/artist.png); }
+span.plse[dirtype=album], li[dirtype=album] { background-image: url(images/album.png); }
+span.plse[dirtype=playlist], li[dirtype=playlist] { background-image: url(images/playlist.png); }
+li[dirtype=parent] { background-image: url(images/back.png); }
+li.browser_button_add { padding-left: 18px !important; background: transparent url(images/add.png) no-repeat !important; cursor: pointer !important; }
+
+/* Sidebar */
+#sidebar_header, #sidebar_display {
+	position: fixed !important;
+	right: 0 !important;
+	margin: 0 !important;
+	border-left: 1px solid #acacac !important;
+}
+
+#sidebar_header {
+	top: 125px !important;
+	padding-top: 15px !important;
+	font-size: 10px;
+	font-weight: bold;
+	background: transparent url(images/content_bkg.jpg) top left repeat-x !important;
+	z-index: 10 !important;
+	overflow: visible;
+}
+
+#sidebar_header span[class=fakelink], #metadata_close {
+	display: block;
+	margin-top: -16px;
+	padding: 0 3px;
+	text-indent: -9999px;
+	width: 16px;
+	height: 16px;
+	background: transparent url(images/fileclose.png) top left no-repeat;
+	float: right;
+}
+
+#metadata_close { float: left !important; margin: 0 !important; }
+
+#metadata_open_lyrics, #metadata_open_description, #metadata_open_review {
+	display: block;
+	float: left !important;
+	margin: 0 !important;
+	padding: 0 3px;
+	text-indent: 0px !important;
+	width: auto !important;
+	background-image: none !important;
+}
+
+#sidebar_display {
+	top: 160px !important;
+	width: 270px;
+	max-width: 270px;
+	overflow: scroll;
+	font-size: small;
+	background-color: #e8e8e8 !important;
+	z-index: 9 !important;
+}
+
+#sidebar_display #sidebar_display_txt {
+	padding-left: 20px;
+}
+
+#sidebar_display ul {
+	list-style-position: inside;
+}
+
+/*------------------------- Misc -------------------------*/
+.nomargin { margin: 0 !important; padding: 0 !important; }
+.fakelink { cursor: pointer; color: #000; }
+.fakelink:hover { color: #7d7d7d; } 

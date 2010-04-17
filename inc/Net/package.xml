@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE package SYSTEM "http://pear.php.net/dtd/package-1.0">
+<package version="1.0" packagerversion="1.4.11">
+ <name>Net_MPD</name>
+ <summary>Music Player Daemon interaction API</summary>
+ <description>Rrovides wrappers to easily use the MPD socket commands.
+ </description>
+ <maintainers>
+  <maintainer>
+   <user>itrebal</user>
+   <name>Graham Christensen</name>
+   <email>graham.christensen@itrebal.com</email>
+   <role>lead</role>
+  </maintainer>
+  </maintainers>
+ <release>
+  <version>1.0.0</version>
+  <date>2007-01-18</date>
+  <license>PHP License 3.01</license>
+  <state>stable</state>
+  <notes>Removed unecissary try/catch blocks. Moving to stable.
+  </notes>
+  <deps>
+   <dep type="php" rel="ge" version="5.1.4"/>
+  </deps>
+  <provides type="class" name="Net_MPD" />
+  <provides type="function" name="Net_MPD::factory" />
+  <provides type="class" name="Net_MPD_Admin" extends="Net_MPD_Common" />
+  <provides type="function" name="Net_MPD_Admin::getOutputs" />
+  <provides type="function" name="Net_MPD_Admin::disableOutput" />
+  <provides type="function" name="Net_MPD_Admin::enableOutput" />
+  <provides type="function" name="Net_MPD_Admin::kill" />
+  <provides type="function" name="Net_MPD_Admin::updateDatabase" />
+  <provides type="class" name="Net_MPD_Common" />
+  <provides type="function" name="Net_MPD_Common::connect" />
+  <provides type="function" name="Net_MPD_Common::isConnected" />
+  <provides type="function" name="Net_MPD_Common::disconnect" />
+  <provides type="function" name="Net_MPD_Common::write" />
+  <provides type="function" name="Net_MPD_Common::read" />
+  <provides type="function" name="Net_MPD_Common::getErrorData" />
+  <provides type="function" name="Net_MPD_Common::runCommand" />
+  <provides type="function" name="Net_MPD_Common::parseOutput" />
+  <provides type="function" name="Net_MPD_Common::getErrors" />
+  <provides type="function" name="Net_MPD_Common::getNotCommands" />
+  <provides type="function" name="Net_MPD_Common::getCommands" />
+  <provides type="function" name="Net_MPD_Common::ping" />
+  <provides type="function" name="Net_MPD_Common::getStats" />
+  <provides type="function" name="Net_MPD_Common::getStatus" />
+  <provides type="class" name="Net_MPD_Database" extends="Net_MPD_Common" />
+  <provides type="function" name="Net_MPD_Database::find" />
+  <provides type="function" name="Net_MPD_Database::getMetadata" />
+  <provides type="function" name="Net_MPD_Database::getAll" />
+  <provides type="function" name="Net_MPD_Database::getAllInfo" />
+  <provides type="function" name="Net_MPD_Database::getInfo" />
+  <provides type="class" name="Net_MPD_Playback" extends="Net_MPD_Common" />
+  <provides type="function" name="Net_MPD_Playback::getCurrentSong" />
+  <provides type="function" name="Net_MPD_Playback::setCrossfade" />
+  <provides type="function" name="Net_MPD_Playback::nextSong" />
+  <provides type="function" name="Net_MPD_Playback::previousSong" />
+  <provides type="function" name="Net_MPD_Playback::pause" />
+  <provides type="function" name="Net_MPD_Playback::play" />
+  <provides type="function" name="Net_MPD_Playback::playId" />
+  <provides type="function" name="Net_MPD_Playback::random" />
+  <provides type="function" name="Net_MPD_Playback::repeat" />
+  <provides type="function" name="Net_MPD_Playback::seek" />
+  <provides type="function" name="Net_MPD_Playback::seekId" />
+  <provides type="function" name="Net_MPD_Playback::setVolume" />
+  <provides type="function" name="Net_MPD_Playback::stop" />
+  <provides type="class" name="Net_MPD_Playlist" extends="Net_MPD_Common" />
+  <provides type="function" name="Net_MPD_Playlist::getPlaylists" />
+  <provides type="function" name="Net_MPD_Playlist::addSong" />
+  <provides type="function" name="Net_MPD_Playlist::clear" />
+  <provides type="function" name="Net_MPD_Playlist::getCurrentSong" />
+  <provides type="function" name="Net_MPD_Playlist::deleteSong" />
+  <provides type="function" name="Net_MPD_Playlist::deleteSongId" />
+  <provides type="function" name="Net_MPD_Playlist::loadPlaylist" />
+  <provides type="function" name="Net_MPD_Playlist::moveSong" />
+  <provides type="function" name="Net_MPD_Playlist::moveSongId" />
+  <provides type="function" name="Net_MPD_Playlist::getPlaylistInfo" />
+  <provides type="function" name="Net_MPD_Playlist::getPlaylistInfoId" />
+  <provides type="function" name="Net_MPD_Playlist::getChanges" />
+  <provides type="function" name="Net_MPD_Playlist::deletePlaylist" />
+  <provides type="function" name="Net_MPD_Playlist::savePlaylist" />
+  <provides type="function" name="Net_MPD_Playlist::shuffle" />
+  <provides type="function" name="Net_MPD_Playlist::swapSong" />
+  <provides type="function" name="Net_MPD_Playlist::swapSongId" />
+  <filelist>
+   <file role="php" baseinstalldir="/" md5sum="f4adbf28dd06b747929ddd7345040571" name="Net/MPD.php"/>
+   <file role="php" baseinstalldir="/" md5sum="b2a9a9768c50a610d4ba7055dfef0e46" name="Net/MPD/Admin.php"/>
+   <file role="php" baseinstalldir="/" md5sum="a2301a1e04df755d70965ffe5265677f" name="Net/MPD/Common.php"/>
+   <file role="php" baseinstalldir="/" md5sum="b76d6fbf71fcede04d8816e1354a8e42" name="Net/MPD/Database.php"/>
+   <file role="php" baseinstalldir="/" md5sum="8a8a565029f2c21fc0683cbe3139ec46" name="Net/MPD/Playback.php"/>
+   <file role="php" baseinstalldir="/" md5sum="18d4bca6d89d276769ecee5186be4235" name="Net/MPD/Playlist.php"/>
+   <file role="doc" baseinstalldir="/" md5sum="3d2f2dd2aea4f3abebc9c80f11b4a097" name="Net/MPD/docs/listArtists.php"/>
+   <file role="doc" baseinstalldir="/" md5sum="a69ec1ca3c692b53e9d643777d6ef0ee" name="Net/MPD/docs/listCurrentPlaylist.php"/>
+   <file role="doc" baseinstalldir="/" md5sum="5c7b6ab616a1fcfbb98a000d9bfb57c6" name="Net/MPD/docs/listSongs.php"/>
+  </filelist>
+ </release>
+ <changelog>
+   <release>
+    <version>0.1.0dev1</version>
+    <date>2006-11-07</date>
+    <state>devel</state>
+    <notes>Initial release.
+    </notes>
+   </release>
+   <release>
+    <version>0.2.0dev</version>
+    <date>2006-11-12</date>
+    <state>devel</state>
+    <notes>- Copied `getCurrentSong&apos; from Net_MPD_Playlist to Net_MPD_Playback.
+- Changed MPD.php to provied an object uniting the sub-objects. $mpd-&gt;Playlist-&gt;addSong() for example. Left the factory for other uses.
+- Changed MPD/Common.php to auto-connect when a command is run. This is to prevent several connections being opend without need, if the Net_MPD class is used to group them all. Also simplifies the connection process.
+- Moved the connection parameters back into the __construct method of the Net_MPD_Common class.
+- Bugfix: defined $output before adding to it as an array, in Net_MPD_Common-&gt;read() function.
+    </notes>
+   </release>
+   <release>
+    <version>0.3.0dev</version>
+    <date>2006-12-10</date>
+    <state>devel</state>
+    <notes>- Fixed bug #9392; Error codes can now be accessed using Exception::getCode()
+- Fixed bug #9334; Now installs into PEAR/Net/
+- Fixed bug #9341; Now permits $e-&gt;getCode();
+    </notes>
+   </release>
+   <release>
+    <version>1.0.0</version>
+    <date>2007-01-18</date>
+    <state>stable</state>
+    <notes>Removed unecissary try/catch blocks. Moving to stable.
+    </notes>
+   </release>
+ </changelog>
+</package>

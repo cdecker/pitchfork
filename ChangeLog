@@ -1,0 +1,150 @@
+
+Pitchfork ChangeLog
+
+------------------------------------------------------------------------------
+
+Changes 0.5.5 (18.01.2008)
+ * pitchfork now reports errors from mpd
+ * New thexy theme from Gianni Chiappetta
+
+Changes - 0.5.4 (25.09.2007)
+ * Cleanup css files so it's easier to make new themes
+ * Plausible fix for segfault/unable to assign complex types to properties
+ issues with albumart
+ * Menu options finally look decent
+ * Make dirlist init not fail if library is empty
+ * Removed a few useless debug statements
+ * Tried to switch to a negative page when pagination was enabled, fix for #81 
+ * Typo in multi add made it only search for last parameter, found by oliver
+ * French translation by Djanil
+ * Basque translation by Xabier Ezpeleta
+ * Fix for slow loading of page one when there's a big playlist (#86)
+ * Switched to html controls for streaming applet and also improved the applet
+ a bit
+
+Changes - 0.5.3 (24.06.2007)
+ * Improved amazon album search to give more correct hit
+ * Added more to album name as described in #62
+ * Show title under artist/album browser instead of filename
+ * Show Artist - Title in browser title bar
+ * Fix bug with xml2array function causing lyrics to loose newlines
+ * Make streaming applet autoplay again and also when coming out of hiding
+ * Make applet stop playing immediately when mpd stops playing to make it seem
+ more responsive
+ * Fix race condition with sidebar and album art
+ * Update big albumart when it's open
+ * Translation support
+ * Show full file path with search results
+ * Make the player control area slightly shorter
+ * German translation by Christian Fischer
+
+
+Changes - 0.5.2 (24.04.2007)
+ * Support for changing position display to remaining
+ * Workaround for konqueror repaint issue (bug #46)
+ * Added pagination support
+ * Added ability to search playlist
+ * Short info/test display on configure screen
+ * Follow and jump to currently playing song option
+ * Added dark theme
+ * Encrypt/hash pitchfork login password
+ * Fixed bug in Hashmap.remove. It would return the container object if it was
+ the first element in the list. 
+ * Added nofollow and noindex to html meta tags. Consider adding pitchfork to
+ a robots.txt file on your server.
+ * Fix caching issue in Opera on the stream player
+ * Add background property to the stream plugin and try to close audio device
+   when stream stops
+ * Workaround for broken xml-declaration on lyricwiki.org
+ * Link to adding/editing lyric on lyricwiki.org
+
+
+Changes - 0.5.1 (21.03.2007)
+ * Switched to JSON in commands
+ * Added ogg streaming support with jorbisplayer
+ * Improved speed of plchanges
+ * Add warnings when something goes wrong with locking of metadata-files
+ * Don't use PHP shorttags
+ * Cleanups
+ * Fix bug where albumart wouldn't show when mime_content_type wasn't
+ available
+ * Added license blurp to all files to avoid any issues 
+
+
+Changes - 0.5.0 (28.02.2007)
+ * Improved theming support
+ * Add theme choice to configure screen
+ * Album review/description
+ * Fix MPD port specification bug
+ * Fix bug with filename in lyrics files
+ * Add option for including stop button
+ * Clean up include stuff (also fixes an issue with initial config screen in opera)
+ * Fix font-issues
+ * Allow to change what should be displayed in the playlist
+ * Add forced lyrics reload
+ * Fixes for safari specific issues
+ * Metadata for album review and description
+ * Changed look of lyrics screen and added refetch button
+
+Changes - 0.4.1 (10.02.2007)
+ * Minor threshold on move in playlist
+ * Fix bug in directory browser
+ * Playlistsupport
+ * Optimizations for selection and playlist
+ * Test on notfound value in album.txt and try again if it is some while ago
+ * adding playlists
+
+Changes - 0.4.0 (08.02.2007)
+ * multiple move support
+ * speed up plchanges
+ * Get changes based only on id/pos
+ * Update DB support
+ * Bugfixes on directory browser
+ * Autoplay on add if pl empty
+ * Search function 
+
+Changes - 0.3.1 (07.02.2007)
+ * Fix rendering error in browsers other than gecko-based
+
+Changes - 0.3.0 (04.02.2007)
+ * Added parent when doubleclicked in dirlist
+ * Don't add whole directory if return is pressed in qa and nothing there
+ * album art
+ * lyrics
+ * mv TODO ChangeLog
+ * new_state == stop => remove currently playing
+ * config => password protection, delay time
+ * Directory browsing based on artist etc
+ * PHP to javascript preferences (delay time won't be implemented until this is fixed)
+ * Split css into base/color-stuff
+
+Changes - 0.2.0 (29.01.2007)
+ * Pool for playlist elements as gecko don't seem to free them
+ * server settings (output devices, random, repeat, xfade) drop-down menu
+ * close folder if clicking on folder icon when folder is open
+ * Speedup of playlist changes and initial playlist loading
+ * Searching in directory listing
+ * Close can't be on escape, some browsers closes open connections to server
+ * Adjust slider when clicking somewhere on it
+ * Run slider callback when moving (250ms threshold)
+ * Fix race-condition, dirlist started building before elements were ready
+ * Several concurrent information requests, should never be more than one looping....
+ 	* reconnect on broken set_timeout
+ * Quick Add
+ * Clean upp all display data when clearing playlist/stopping
+
+Changes - 0.1.0rc1/2 (21.01.2007)
+ * icon to indicate song/folder in dirlist
+ * organization
+   - double click moves right, seperate enque button (hot key for add)
+   - double click adds, single click opens
+ * .htaccess/stuff.conf file
+ * Use utf-8
+ * When removing song before currently playing, showing of currently playing is removed 
+ * Hi-light on prev/play/pause/next ..done
+ * coloured background around the "player" area (mockup.png)
+ * seems to fail on selecting playing song sometimes
+ * fixed position on "player" area? 
+ * moving something up in the list causes jumping on response from server (the moved is probably placed wrongly so that it jumps one up on response from server)
+   - "Fixed" - when dropped on something it probably should land there....
+   - FIXED! Oh happy days!

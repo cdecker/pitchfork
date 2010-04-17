@@ -1,0 +1,7 @@
+
+Should be sufficient to just extract the tarball and copy the old
+config directory over to the new directory. (cp -A pitchfork.old/config/* pitchfork/config/)
+
+Remember to make sure apache has write permission to the config directory.
+
+
