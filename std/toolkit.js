@@ -412,7 +412,7 @@ function unselect_node(node) {
 
 function unselect_all_nodes(container) {
 	if(xpath_ok()) {
-		var nodes = xpath_query(container, ".//.[@selected]");
+		var nodes = xpath_query(container, "self::node()//self::node()[@selected]");
 		var n; 
 		var elems = new Array();
 		while((n = nodes.iterateNext())) {
@@ -435,7 +435,7 @@ function unselect_all_nodes(container) {
 /* will check if anything is selected */
 function selection_anything_selected(container) {
 	if(xpath_ok()) {
-		var x = xpath_query(container, ".//.[@selected]", XPathResult.ANY_UNORDERED_NODE_TYPE);
+		var x = xpath_query(container, "self::node()//self::node()[@selected]", XPathResult.ANY_UNORDERED_NODE_TYPE);
 		return x.singleNodeValue?true:false;
 	}
 	else {
@@ -454,7 +454,7 @@ function selection_anything_selected(container) {
  */
 function find_first_selected_node(container, needle) {
 	if(xpath_ok()&&!needle) {
-		var x = xpath_query(container, ".//.[@selected]", XPathResult.FIRST_ORDERED_NODE_TYPE);
+		var x = xpath_query(container, "self::node()//self::node()[@selected]", XPathResult.FIRST_ORDERED_NODE_TYPE);
 		return x.singleNodeValue;
 	}
 	else {
