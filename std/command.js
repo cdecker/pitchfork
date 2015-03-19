@@ -41,6 +41,7 @@ playing.pl_size = 0;
 playing.size = 0;
 playing.artist = "";
 playing.album = "";
+playing.year = "";
 playing.title = "";
 playing.image = "";	// 
 playing.asin = "";	
@@ -66,6 +67,7 @@ playing.pp_button = null;
 playing.disp_artist = null;
 playing.disp_title = null; 
 playing.disp_album = null;
+playing.disp_year = null;
 playing.albumart = null;
 
 var last_pl_selected = true;
@@ -127,6 +129,7 @@ function init_player() {
 		playing.disp_artist = document.getElementById('disp_artist');
 		playing.disp_title = document.getElementById('disp_title');
 		playing.disp_album = document.getElementById('disp_album');
+		playing.disp_year = document.getElementById('disp_year');
 		playing.albumart = document.getElementById("albumart");
 		playing.pp_button = document.getElementById("pp_button");
 
@@ -474,11 +477,14 @@ function request_song_info() {
 		remove_children(playing.disp_artist);
 		remove_children(playing.disp_title);
 		remove_children(playing.disp_album);
+		if(playing.disp_year)
+			remove_children(playing.disp_year);
 		if(playing.albumart)
 			remove_children(playing.albumart);
 		playing.artist = "";
 		playing.title = "";
 		playing.album = "";
+		playing.year = "";
 		playing.image = "";
 		playing.asin = "";
 		playing.length = "";
@@ -495,9 +501,11 @@ function update_current_song(info) {
 	var artist = info[ "Artist"];
 	var title = info["Title"];
 	var album = info[ "Album"];
+	var year = (info["Year"] == null) ? info["Date"] : info["Year"];
 	var a = playing.disp_artist;
 	var t = playing.disp_title;
 	var alb = playing.disp_album;
+	var y = playing.disp_year;
 	var new_thumb = false;
 
 	if(typeof(title)=='undefined')
@@ -506,6 +514,10 @@ function update_current_song(info) {
 		album = "";
 	if(typeof(artist)=='undefined')
 		artist = "";
+	if(typeof(year)=='undefined')
+		year = "";
+	else
+		year = "["+year+"]";
 
 	if(artist!=playing.artist) {
 		playing.artist = artist;
@@ -518,6 +530,12 @@ function update_current_song(info) {
 		new_thumb = true;
 		remove_children(alb);
 		alb.appendChild(create_txt(album));
+	}
+	if((playing.year != year) && y) {
+		playing.year = year;
+		new_thumb = true;
+		remove_children(y);
+		y.appendChild(create_txt(year));
 	}
 
 	if(typeof(info['file'])!='undefined') {

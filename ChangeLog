@@ -3,6 +3,14 @@ Pitchfork ChangeLog
 
 ------------------------------------------------------------------------------
 
+Changes 0.5.6 (18.03.2015)
+ * All of the fixes in this release are merged from Joshua Wise's "patchfork"
+ * Fixed "Undefined index: playlist" error
+ * Removed extra dashes from several strings in en.php
+ * Updated Lyric Wiki URL
+ * Added Content-Type header to config.php
+ * Display year along with song name
+
 Changes 0.5.5 (18.01.2008)
  * pitchfork now reports errors from mpd
  * New thexy theme from Gianni Chiappetta

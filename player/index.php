@@ -63,7 +63,7 @@
 	<div class='pc_artist' >
 		<p class='disp'><span id='disp_title'></span><br/></p>
 		<p class='disp' ><span id='disp_artist'></span><br/></p>
-		<p class='disp'><span id='disp_album'></span><br/></p>
+		<p class='disp'><span id='disp_album'></span> <span id='disp_year'></span><br/></p>
 	</div>
 
 	<div class='pc_ci' >

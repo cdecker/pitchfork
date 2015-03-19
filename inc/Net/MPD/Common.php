@@ -358,7 +358,7 @@ class Net_MPD_Common
                     // This is to determine if it was in a status call
                     // or in a directory call.
                     case 'playlist':
-                        if ($prev['key'] == 'random') {
+                        if ($output['status']) {
                             $output['status'][$key] = $value;
                         } else {
                             $output[$key][] = $value;

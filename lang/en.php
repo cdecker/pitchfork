@@ -27,8 +27,8 @@
 		/* configure.php */
 		'Pitchfork MPD Client Configuration' => 'Pitchfork MPD Client Configuration',
 		'Configure settings' => 'Configure settings',
-		'Connection-settings' => 'Connection-settings',
-		'Where can I find your MPD-server?' => 'Where can I find your MPD-server?',
+		'Connection-settings' => 'Connection settings',
+		'Where can I find your MPD-server?' => 'Where can I find your MPD server?',
 		'Hostname:' => 'Hostname:',
 		'Port:' => 'Port:',
 		'Password:' => 'Password:',

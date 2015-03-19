@@ -438,7 +438,7 @@
 		$out .= "</tns:getSong></SOAP-ENV:Body></SOAP-ENV:Envelope>\r\n";
 
 		$head = "POST /server.php HTTP/1.1\r\n";
-		$head .= "Host: lyricwiki.org\r\n";
+		$head .= "Host: lyrics.wikia.com\r\n";
 		$head .= "SOAPAction: urn:LyricWiki#getSong\r\n";
 		$head .= "Content-Type: text/xml; charset=UTF-8\r\n";
 		$head .= "User-Agent: RemissPitchfork/0.1\r\n";
