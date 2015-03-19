@@ -829,7 +829,7 @@ function open_settings_cb(response) {
 	var tmp = create_node("hr"); 
 	tmp.className = "server_settings";
 	txt.appendChild(tmp);
-	txt.appendChild(create_txt("Outputs:"));
+	txt.appendChild(create_txt(LANG.OUTPUTS));
 	txt.appendChild(create_node("br"));
 	try {
 		var outputs = response['outputs'];

@@ -166,7 +166,7 @@
 
 <div class='main_container' id='main_container'>
 
-<h1>Pitchfork configuration</h1>
+<h1><?php echo m("Pitchfork Configuration"); ?></h1>
 
 <?php if(isset($_GET['new_config'])) 
 	echo "<p>" . m("Let us take a minute to configure this player") . "</p>\n";
@@ -222,7 +222,7 @@ foreach($themes as $theme) {
 <select name="lang">
 <?php 
 	// TODO: move
-	$languages = array("eu" => "Basque", "en" => "English", "fr" => "French", "de" => "German");
+	$languages = array("eu" => "Basque", "en" => "English", "fr" => "French", "de" => "German", "ru" => "Russian");
 	$clang = get_config("lang", "en");
 	foreach($languages as $l => $n) {
 		echo "\n<option value='$l'";
@@ -259,13 +259,13 @@ for($i=0; $i<$length;$i++) {
 	echo "<input type='checkbox' ";
 	if($selected_fields[$i])
 		echo "checked='checked' ";
-	echo "name='plentry_".$pl_fields[$i]."' id='pl_i_$i' /> <label for='pl_i_$i'>".$pl_fields[$i]."</label></td></tr>\n";
+	echo "name='plentry_".$pl_fields[$i]."' id='pl_i_$i' /> <label for='pl_i_$i'>".m($pl_fields[$i])."</label></td></tr>\n";
 }
 
 ?>
-<tr><td>&nbsp;</td><td><input type='checkbox' disabled='disabled' checked='checked' id='tnode_2' /> <label for='tnode_2'> Time</label></td></tr>
+<tr><td>&nbsp;</td><td><input type='checkbox' disabled='disabled' checked='checked' id='tnode_2' /> <label for='tnode_2'><?php echo m("Time"); ?></label></td></tr>
 </table>
-<h2>Metadata</h2>
+<h2><?php echo m("Metadata"); ?></h2>
 <p><?php echo m("Configuration for retrieving metadata. This requires that the machine pitchfork is running on can access the internet."); ?></p>
 <table>
 <tr><td><?php echo m("Disable metadata:"); ?> </td><td><input type='checkbox' <?php echo get_checkbox_from_config('metadata_disable') ?> name='metadata_disable' /></td></tr>
@@ -277,7 +277,7 @@ for($i=0; $i<$length;$i++) {
 </p>
 <p style='padding: 12px 0px 12px 00px;'>
 <input name='cancel' type='button' value='Cancel' onclick='window.location = "index.php" ' />
-<input name='submit' type="submit" value="Save" />
+<input name='submit' type='submit' value='Save' />
 </p>
 </form>
 <?php if(!isset($_GET['new_config'])) { ?>

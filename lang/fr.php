@@ -1,5 +1,6 @@
 <?php
 	/* These files also has to be written in utf-8 */
+	/* Translated by Djanil */
 
 	$LANG['fr'] = array( 
 		/* index.php */
@@ -14,6 +15,8 @@
 		'Configure' => 'Configurer',
 		'Start streaming to browser' => 'Démarrer le flux vers le navigateur',
 		'Streaming' => 'Flux',
+		'Get music recommendations based on current playlist' => 'Get music recommendations based on current playlist', /* TODO: translate */
+		'Recommendation' => 'Recommendation', /* TODO: translate */
 		'Get more information about this song/album' => 'Obtenir plus d infos sur la chanson/l album',
 		'Song Info' => 'Infos sur la chanson',
 		'Crop to selection' => 'Ne conserver que la sélection',
@@ -25,6 +28,7 @@
 		'Close' => 'Fermer',
 
 		/* configure.php */
+		'Pitchfork Configuration' => 'Configuration du Pitchfork',
 		'Pitchfork MPD Client Configuration' => 'Configuration du Client MPD Pitchfork',
 		'Configure settings' => 'Réglages de configuration',
 		'Connection-settings' => 'Réglages de connection',
@@ -47,6 +51,19 @@
 		'Show these fields in the playlist:' => 'Afficher ces champs dans la playlist:',
 		'Position' => 'Position',
 		'Show nonstandard' => 'Afficher les non-standard',
+		'Title' => 'Title', /* TODO: translate */
+		'Album' => 'Album', /* TODO: translate */
+		'Artist' => 'Artist', /* TODO: translate */
+		'Track' => 'Track', /* TODO: translate */
+		'Name' => 'Name', /* TODO: translate */
+		'Genre' => 'Genre', /* TODO: translate */
+		'Date' => 'Date', /* TODO: translate */
+		'Composer' => 'Composer', /* TODO: translate */
+		'Performer' => 'Performer', /* TODO: translate */
+		'Comment' => 'Comment', /* TODO: translate */
+		'Disc' => 'Disc', /* TODO: translate */
+		'Time' => 'Time', /* TODO: translate */
+		'Metadata' => 'Metadata', /* TODO: translate */
 		'Configuration for retrieving metadata. This requires that the machine pitchfork is running on can access the internet.' => 
 			'Configuration pour l\'extraction des metadatas. Ceci nécessite que la machine où pitchfork est installé ait accès à internet.',
 		'Disable metadata:' => 'Désactiver les metadatas:',

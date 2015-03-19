@@ -15,6 +15,8 @@
 		'Configure' => 'Konfigurieren',
 		'Start streaming to browser' => 'Starte streaming zum Browser',
 		'Streaming' => 'Streaming',
+		'Get music recommendations based on current playlist' => 'Get music recommendations based on current playlist', /* TODO: translate */
+		'Recommendation' => 'Recommendation', /* TODO: translate */
 		'Get more information about this song/album' => 'Erhalte mehr Informationen über dieses Lied/Album',
 		'Song Info' => 'Lied-Infos',
 		'Crop to selection' => 'Ausgewählte ausschneiden',
@@ -49,6 +51,19 @@
 		'Show these fields in the playlist:' => 'Diese Felder in der Playlist anzeigen:',
 		'Position' => 'Position',
 		'Show nonstandard' => 'Zeige Felder, die nicht Standard sind',
+		'Title' => 'Title', /* TODO: translate */
+		'Album' => 'Album', /* TODO: translate */
+		'Artist' => 'Artist', /* TODO: translate */
+		'Track' => 'Track', /* TODO: translate */
+		'Name' => 'Name', /* TODO: translate */
+		'Genre' => 'Genre', /* TODO: translate */
+		'Date' => 'Date', /* TODO: translate */
+		'Composer' => 'Composer', /* TODO: translate */
+		'Performer' => 'Performer', /* TODO: translate */
+		'Comment' => 'Comment', /* TODO: translate */
+		'Disc' => 'Disc', /* TODO: translate */
+		'Time' => 'Time', /* TODO: translate */
+		'Metadata' => 'Metadata', /* TODO: translate */
 		'Configuration for retrieving metadata. This requires that the machine pitchfork is running on can access the internet.' => 
 			'Einstellungen zum empfangen der Metadaten. Dies benötigt eine Internetverbindung auf dem Rechner, wo Pitchfork eingesetzt wird.',
 		'Disable metadata:' => 'Metadaten nicht benutzen:',

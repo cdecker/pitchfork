@@ -484,7 +484,7 @@
 				else if($d['name']=="URL")
 					$res['url'] = $d['tagData'];
 			}
-			$res['from'] = "lyricwiki.org";
+			$res['from'] = "lyrics.wikia.com";
 			$res['time'] = time();
 			/* this caching thing will have to be extracted if we 
 			 * put in another lyrics source */

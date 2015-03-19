@@ -1,5 +1,6 @@
 <?php
 	/* These files also has to be written in utf-8 */
+	/* Use this file as a template to add your own translation */
 
 	$LANG['en'] = array( 
 		/* index.php */
@@ -14,6 +15,8 @@
 		'Configure' => 'Configure',
 		'Start streaming to browser' => 'Start streaming to browser',
 		'Streaming' => 'Streaming',
+		'Get music recommendations based on current playlist' => 'Get music recommendations based on current playlist',
+		'Recommendation' => 'Recommendation',
 		'Get more information about this song/album' => 'Get more information about this song/album',
 		'Song Info' => 'Song Info',
 		'Crop to selection' => 'Crop to selection',
@@ -25,6 +28,7 @@
 		'Close' => 'Close',
 
 		/* configure.php */
+		'Pitchfork Configuration' => 'Pitchfork Configuration',
 		'Pitchfork MPD Client Configuration' => 'Pitchfork MPD Client Configuration',
 		'Configure settings' => 'Configure settings',
 		'Connection-settings' => 'Connection settings',
@@ -47,6 +51,19 @@
 		'Show these fields in the playlist:' => 'Show these fields in the playlist:',
 		'Position' => 'Position',
 		'Show nonstandard' => 'Show nonstandard',
+		'Title' => 'Title',
+		'Album' => 'Album',
+		'Artist' => 'Artist',
+		'Track' => 'Track',
+		'Name' => 'Name',
+		'Genre' => 'Genre',
+		'Date' => 'Date',
+		'Composer' => 'Composer',
+		'Performer' => 'Performer',
+		'Comment' => 'Comment',
+		'Disc' => 'Disc',
+		'Time' => 'Time',
+		'Metadata' => 'Metadata',
 		'Configuration for retrieving metadata. This requires that the machine pitchfork is running on can access the internet.' => 
 			'Configuration for retrieving metadata. This requires that the machine pitchfork is running on can access the internet.',
 		'Disable metadata:' => 'Disable metadata:',
