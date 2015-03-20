@@ -123,7 +123,7 @@ function dirlist_init_handler(response) {
 	  stuff.appendChild(search);  
 	  var opt = blist.search_opt = create_node("option", "bs_search");
 	  opt.value = "-1";
-	  opt.appendChild(create_txt("Search:"));
+	  opt.appendChild(create_txt(LANG.SEARCH + ":"));
 	  insert_first(opt, search);
 	  search.selectedIndex = 0;
 	  search.id ="browse_search_select";

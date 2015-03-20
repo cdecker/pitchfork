@@ -70,6 +70,11 @@
 		'Shoutcast integration' => 'Shoutcast integration',
 		'Optionally specify the URL to the shout stream provided by mpd to enable integration with pitchfork.' => 
 			'Optionally specify the URL to the shout stream provided by mpd to enable integration with pitchfork.',
+		'Select streaming method:' => 'Select streaming method:',
+		'HTML5 Audio - Recommended for most modern browsers.' => 'HTML5 Audio - Recommended for most modern browsers.',
+		'Jorbis Applet - For older browsers without HTML5 support.' => 'Jorbis Applet - For older browsers without HTML5 support.',
+		'Autoplay:' => 'Autoplay:',
+		'Stream health check / reconnect interval in milliseconds' => 'Stream health check / reconnect interval in milliseconds',
 		'Pitchfork info' => 'Pitchfork info',
 		'Release version:' => 'Release version:',
 		'Release date:' => 'Release date:',

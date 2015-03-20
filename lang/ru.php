@@ -70,6 +70,11 @@
 		'Shoutcast integration' => 'Интеграция Shoutcast',
 		'Optionally specify the URL to the shout stream provided by mpd to enable integration with pitchfork.' => 
 			'Для интеграции с Pitchfork укажите URL стрима предоставляемого MPD.',
+		'Select streaming method:' => 'Выберите метод получения аудио потока:',
+		'HTML5 Audio - Recommended for most modern browsers.' => 'HTML5 Audio - Рекоммендуется для большинства современных броузеров.',
+		'Jorbis Applet - For older browsers without HTML5 support.' => 'Jorbis Applet - Для старых броузеров, не поддерживающих HTML5.',
+		'Autoplay:' => 'Автозапуск:',
+		'Stream health check / reconnect interval in milliseconds' => 'Интервал проверки состояния аудио потока / восстановления соединения в миллисекундах',
 		'Pitchfork info' => 'Информация о Pitchfork',
 		'Release version:' => 'Версия релиза:',
 		'Release date:' => 'Дата релиза:',

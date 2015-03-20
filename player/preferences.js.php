@@ -63,6 +63,10 @@
 	else echo "false";
 	echo ";\n";
 	
+	echo "var STREAM_AUTO = " . get_config("stream_auto", "false") . ";\n";
+	echo "var STREAM_MODE = " . get_config("stream_mode", "0") . ";\n";
+	echo "var STREAM_INT = " . get_config("stream_interval", "1000") . ";\n";
+	
 	echo "var pagination_max = " . get_config("pagination", "0") . ";\n";
 
 	echo "\n";

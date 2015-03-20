@@ -70,6 +70,11 @@
 		'Shoutcast integration' => 'Shoutcast integrazioa',
 		'Optionally specify the URL to the shout stream provided by mpd to enable integration with pitchfork.' => 
 			'Nahi baduzu ezarri shoutstream iturriaren URL helbidea',
+		'Select streaming method:' => 'Select streaming method:', /* TODO: translate */
+		'HTML5 Audio - Recommended for most modern browsers.' => 'HTML5 Audio - Recommended for most modern browsers.', /* TODO: translate */
+		'Jorbis Applet - For older browsers without HTML5 support.' => 'Jorbis Applet - For older browsers without HTML5 support.', /* TODO: translate */
+		'Autoplay:' => 'Autoplay:', /* TODO: translate */
+		'Stream health check / reconnect interval in milliseconds' => 'Stream health check / reconnect interval in milliseconds', /* TODO: translate */
 		'Pitchfork info' => 'Pitchfork info',
 		'Release version:' => 'Bertsioa:',
 		'Release date:' => 'Eguneraketa data:',

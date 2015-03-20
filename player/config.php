@@ -104,22 +104,35 @@
 		$config = simplexml_load_string("<?xml version='1.0' ?>\n<root>\n</root>\n");
 	}
 	if(isset($_POST['submit'])) {
-		$vars = array( 'mpd_host', 'mpd_port', 'mpd_pass', 'login_pass', 'update_delay', 
-				'metadata_disable', 'theme', 'stop_button', 'shout_url', 'pagination', 'lang');
+		$vars = array('mpd_host', 'mpd_port', 'mpd_pass', 'login_pass', 'update_delay', 
+		    'metadata_disable', 'theme', 'stop_button', 'shout_url', 'pagination',
+		    'lang', 'stream_mode', 'stream_interval', 'stream_auto');
+		
 		foreach ($vars as $var) {
 			$add = "";
 			if(isset($_POST[$var])&&trim($_POST[$var])!="") 
 				$add = trim($_POST[$var]);
 			
-			if($var=="pagination") {
-				if(!is_numeric($add))
+			if($var == "pagination") {
+				if (!is_numeric($add)) {
 					$add = 0;
-				else $add = intval($add);
-			}
-			else if($var=="login_pass"&&strlen($add)>0) {
-				if($add== HASH_PASS)
+				} else {
+				    $add = intval($add);
+				}
+				
+			} else if ($var == "stream_interval") {
+			    if (!is_numeric($add)) {
+			        $add = 1000;
+			    } else {
+			        $add = intval($add);
+			    }
+				
+			} else if ($var == "login_pass" && strlen($add) > 0) {
+				if ($add== HASH_PASS) {
 					continue;
-				$add = generate_hash($add);
+			    } else {
+    				$add = generate_hash($add);
+    			}
 			}
 
 			
@@ -275,6 +288,22 @@ for($i=0; $i<$length;$i++) {
 <?php echo m("Optionally specify the URL to the shout stream provided by mpd to enable integration with pitchfork.");?> <br/>
 <input size="35" type='text' name='shout_url' value='<?php if(!is_null(get_config("shout_url"))) echo htmlspecialchars(get_config("shout_url")); ?>' />
 </p>
+<p>
+<?php echo m("Select streaming method:");?> <br/>
+<input type='radio' name='stream_mode' value='0' <?php if (get_config("stream_mode", "0") == "0") echo "checked='checked'" ?>><?php echo m("HTML5 Audio - Recommended for most modern browsers."); ?></input> <br/>
+<input type='radio' name='stream_mode' value='1' <?php if (get_config("stream_mode", "0") == "1") echo "checked='checked'" ?>><?php echo m("Jorbis Applet - For older browsers without HTML5 support."); ?></input> <br/>
+</p>
+<table>
+<tr>
+<td><label for='stream_auto'><?php echo m("Autoplay:"); ?></label></td>
+<td><input type='checkbox' <?php if (!is_null(get_config("stream_auto"))) echo "checked='checked'"; ?> name='stream_auto' value='true' /></td>
+</tr>
+<tr>
+<td><label for='stream_interval'><?php echo m("Update time:"); ?></label></td>
+<td><input name='stream_interval' type='text' value='<?php echo get_config("stream_interval", 1000); ?>'
+    title="<?php echo m("Stream health check / reconnect interval in milliseconds");?>" size="5" /></td>
+</tr>
+</table>
 <p style='padding: 12px 0px 12px 00px;'>
 <input name='cancel' type='button' value='Cancel' onclick='window.location = "index.php" ' />
 <input name='submit' type='submit' value='Save' />
