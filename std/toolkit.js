@@ -92,7 +92,7 @@ function replace_node(ins, rem) {
 }
 // removes this nodes children
 function remove_children(what) {
-	if(what != null && !what.hasChildNodes)
+	if(what == null || !what.hasChildNodes)
 		return null;
 	var buf = create_fragment();
 	while(what.hasChildNodes()) 

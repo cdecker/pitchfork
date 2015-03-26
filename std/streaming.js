@@ -138,12 +138,12 @@ function streaming_destroy() {
 	while(streaming_info.eventListeners.length)
 		streaming_info.eventListeners.pop().unregister();
 	
-	remove_node(streaming_info.applet);
+	remove_node(streaming_info.streamer);
 	remove_node(streaming_info.auto_play_node);
 	remove_node(streaming_info.notification_txt);
 	remove_node(streaming_info.display);
 
-	streaming_info.applet = null;
+	streaming_info.streamer = null;
 	streaming_info.auto_play_node = null;
 	streaming_info.notification_txt = null;
 	streaming_info.display = null;
@@ -294,7 +294,10 @@ function streaming_try_autostop() {
 
 function streaming_update_stat() {
 	remove_children(streaming_info.notification_txt);
-	streaming_info.notification_txt.appendChild(create_txt(streaming_info.stat?LANG.STOP:LANG.PLAY));
+    // Do not try to change status if streaming menu was closed before the scheduled update fires.
+	if (streaming_info.notification_txt != null) {
+    	streaming_info.notification_txt.appendChild(create_txt(streaming_info.stat?LANG.STOP:LANG.PLAY));
+    }
 }
 
 function streaming_check_playing() {

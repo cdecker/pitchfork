@@ -3,6 +3,10 @@ Pitchfork ChangeLog
 
 ------------------------------------------------------------------------------
 
+Changes 0.6.1 (26.03.2015)
+ * Fixed several bugs with streaming menu
+ * Removed config/.svnignore file
+
 Changes 0.6.0 (20.03.2015)
  * Stream with HTML5 audio by default, leave old applet as legacy mode
  * Get default autoplay value from settings
