@@ -3,9 +3,10 @@ Pitchfork ChangeLog
 
 ------------------------------------------------------------------------------
 
-Changes 0.6.1 (26.03.2015)
+Changes 0.6.1 (27.03.2015)
  * Fixed several bugs with streaming menu
  * Removed config/.svnignore file
+ * Fixed xfade not working if set to 0
 
 Changes 0.6.0 (20.03.2015)
  * Stream with HTML5 audio by default, leave old applet as legacy mode

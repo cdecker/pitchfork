@@ -361,7 +361,11 @@ function current_status_handler(info, has_plchanges) {
 
 	playing.repeat = info.repeat;
 	playing.random = info.random;
-	playing.xfade = info.xfade;
+	if (info.xfade == null) {
+	    playing.xfade = 0;
+	} else {
+	    playing.xfade = info.xfade;
+    }
 
 	if(state!="stop") {
 		
