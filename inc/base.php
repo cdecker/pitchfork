@@ -10,8 +10,8 @@ session_start();
 set_include_path("." . PATH_SEPARATOR . get_include_path());
 require_once('Net/MPD.php');
 
-$release_version = "0.5.5";
-$release_date = "18-01-2008";
+$release_version = "0.6.1";
+$release_date = "27-03-2015";
 
 $config_dir = "../config";
 

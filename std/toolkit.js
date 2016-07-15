@@ -92,7 +92,7 @@ function replace_node(ins, rem) {
 }
 // removes this nodes children
 function remove_children(what) {
-	if(!what.hasChildNodes)
+	if(what == null || !what.hasChildNodes)
 		return null;
 	var buf = create_fragment();
 	while(what.hasChildNodes()) 
@@ -983,7 +983,7 @@ function setup_overlay(back, sizes, open_callback, close_callback) {
 	img.src = IMAGE.CLOSE;
 	img.setAttribute("oid", oid);
 	img.className = "close fakelink";
-	img.title = "Close [Ctrl+Shift+X]";
+	img.title = LANG.CLOSE + " [Ctrl+Shift+X]";
 	add_listener(img, "click", close_overlay_cb);
 
 	t.appendChild(img);

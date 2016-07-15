@@ -1,5 +1,6 @@
 <?php
 	/* These files also has to be written in utf-8 */
+	/* Translated by Xabier Ezpeleta */
 
 	$LANG['eu'] = array( 
 		/* index.php */
@@ -14,6 +15,8 @@
 		'Configure' => 'Hobespenak',
 		'Start streaming to browser' => 'Hasi nabigatzailera streaming egiten',
 		'Streaming' => 'Streaming',
+		'Get music recommendations based on current playlist' => 'Get music recommendations based on current playlist', /* TODO: translate */
+		'Recommendation' => 'Recommendation', /* TODO: translate */
 		'Get more information about this song/album' => 'Album/abesti honi buruz informazio gehiago',
 		'Song Info' => 'Abestiari buruz',
 		'Crop to selection' => 'Aukeraketa bakarrik',
@@ -25,6 +28,7 @@
 		'Close' => 'Itxi',
 
 		/* configure.php */
+		'Pitchfork Configuration' => 'Pitchfork Hobespenak',
 		'Pitchfork MPD Client Configuration' => 'Pitchfork MPD Bezeroaren Hobespenak',
 		'Configure settings' => 'Aldatu hobespenak',
 		'Connection-settings' => 'Konexioaren hobespenak',
@@ -47,12 +51,30 @@
 		'Show these fields in the playlist:' => 'Azaldu datu hauek zerrendan:',
 		'Position' => 'Posizioa',
 		'Show nonstandard' => 'Bestelakoak',
+		'Title' => 'Title', /* TODO: translate */
+		'Album' => 'Album', /* TODO: translate */
+		'Artist' => 'Artist', /* TODO: translate */
+		'Track' => 'Track', /* TODO: translate */
+		'Name' => 'Name', /* TODO: translate */
+		'Genre' => 'Genre', /* TODO: translate */
+		'Date' => 'Date', /* TODO: translate */
+		'Composer' => 'Composer', /* TODO: translate */
+		'Performer' => 'Performer', /* TODO: translate */
+		'Comment' => 'Comment', /* TODO: translate */
+		'Disc' => 'Disc', /* TODO: translate */
+		'Time' => 'Time', /* TODO: translate */
+		'Metadata' => 'Metadata', /* TODO: translate */
 		'Configuration for retrieving metadata. This requires that the machine pitchfork is running on can access the internet.' => 
 			'Metadata lortzeko konfigurazioa. Pitchfork exekutatzen ari den makinak interneterako atzipena behar du',
 		'Disable metadata:' => 'Desgaitu metadata:',
 		'Shoutcast integration' => 'Shoutcast integrazioa',
 		'Optionally specify the URL to the shout stream provided by mpd to enable integration with pitchfork.' => 
 			'Nahi baduzu ezarri shoutstream iturriaren URL helbidea',
+		'Select streaming method:' => 'Select streaming method:', /* TODO: translate */
+		'HTML5 Audio - Recommended for most modern browsers.' => 'HTML5 Audio - Recommended for most modern browsers.', /* TODO: translate */
+		'Jorbis Applet - For older browsers without HTML5 support.' => 'Jorbis Applet - For older browsers without HTML5 support.', /* TODO: translate */
+		'Autoplay:' => 'Autoplay:', /* TODO: translate */
+		'Stream health check / reconnect interval in milliseconds' => 'Stream health check / reconnect interval in milliseconds', /* TODO: translate */
 		'Pitchfork info' => 'Pitchfork info',
 		'Release version:' => 'Bertsioa:',
 		'Release date:' => 'Eguneraketa data:',

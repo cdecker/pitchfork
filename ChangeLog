@@ -3,6 +3,33 @@ Pitchfork ChangeLog
 
 ------------------------------------------------------------------------------
 
+Changes 0.6.1 (27.03.2015)
+ * Fixed several bugs with streaming menu
+ * Removed config/.svnignore file
+ * Fixed xfade not working if set to 0
+
+Changes 0.6.0 (20.03.2015)
+ * Stream with HTML5 audio by default, leave old applet as legacy mode
+ * Get default autoplay value from settings
+ * Start streaming automatically if autplay is on
+ * Fixed occasional error when closing streaming menu
+ * Fixed some more non-translatable strings ("Search" and "Close" in browser)
+
+Changes 0.5.7 (19.03.2015)
+ * Updated Lyrics Wiki URL in player/metadata.php label and lang/*.js files
+ * Russian translation by Kirill Strizhak
+ * Removed redundant LANG.E_CONNECT in lang/*.js files
+ * Updated language files so that they match base "en" versions
+ * Fixed several non-translatable strings
+
+Changes 0.5.6 (18.03.2015)
+ * All of the fixes in this release are merged from Joshua Wise's "patchfork"
+ * Fixed "Undefined index: playlist" error
+ * Removed extra dashes from several strings in en.php
+ * Updated Lyric Wiki URL
+ * Added Content-Type header to config.php
+ * Display year along with song name
+
 Changes 0.5.5 (18.01.2008)
  * pitchfork now reports errors from mpd
  * New thexy theme from Gianni Chiappetta

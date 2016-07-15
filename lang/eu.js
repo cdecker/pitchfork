@@ -1,5 +1,7 @@
 /* these files need to be written in utf-8 */
+/* Translated by Xabier Ezpeleta */
 
+var LANG = new Object();
 // Messages
 LANG.VOLUME		='Bolumena';
 LANG.BITRATE		='Bit-tasa: ';
@@ -7,6 +9,10 @@ LANG.POSITION		='Posizioa: ';
 LANG.CROP		='Eskilatu'; 
 LANG.CROP_SELECTION	="Aukeraketa bakarrik";
 LANG.CLEAR_PLAYLIST	="Garbitu zerrenda";
+
+LANG.PLAY		="Play";
+LANG.STOP		="Stop";
+
 
 LANG.WAIT_LOADING	="Zabaltzen..."; 
 LANG.WAIT_UPDATING_DB	="Datubasea eguneratzen..."
@@ -34,7 +40,7 @@ LANG.NO			="Ez";
 LANG.BY_URL		="URL bidez";
 LANG.FROM_FILE		="Fitxategitik";
 LANG.TEXT		="Textua";
-LANG.OUTPUTS		="Irteerak";
+LANG.OUTPUTS		="Irteerak:";
 LANG.CLOSE		="Itxi";
 LANG.SAVE		="Gorde";
 LANG.REFETCH		="Refetch";
@@ -68,14 +74,13 @@ LANG.JUMP_CURRENT	= "Oraingo abestira salto egin [Space]";
 LANG.PAGINATION_FOLLOW	= "Oraingo abestia jarraitu";
 LANG.PAGINATION_NOFOLLOW= "Oraingo abestia ez jarraitu";
 
-LANG.LYRICWIKI_LYRIC	= "%s lyric at lyricwiki.org";  // add/edit lyric at ..
+LANG.LYRICWIKI_LYRIC	= "%s lyric at lyrics.wikia.com";  // add/edit lyric at ..
 
 // ERRORS
 LANG.E_CONNECT		="Ezin da MPD zerbitzarira konektatu";
 LANG.E_INVALID_RESPONSE	="Zerbitzariaren okerreko erantzuna";
 LANG.E_INVALID_RESULT	="Zerbitzariaren okerreko emaitza";
 LANG.E_NO_RESPONSE	="Zerbitzariak ez du erantzuten";
-LANG.E_CONNECT		="MPD-ra ezin izan da konektatu";
 LANG.E_INIT		="Hasieratzean hutsegitea"
 LANG.E_INIT_PL		="Zerrenda hasieratzean hutsegitea";
 LANG.E_PL_MOVE		="Zerrendaren aldaketak huts egin du";
@@ -101,6 +106,7 @@ LANG.RECOMMEND_EMPTY_PLAYLIST    ="Zerrendan abestiren bat behar duzu gomendioak
 LANG.RECOMMEND_ADDTOPLAYLIST    ="Gehitu uneko zerrendara";
 LANG.RECOMMEND_SIMILAR          ="Zure liburutegitik antzeko artistak:";
 LANG.RECOMMEND_ARTISTS          ="Gomendatutako artistak:";
+
 
 /* Don't need translation, but needs to be here: */
 LANG.NT_AMAZON = "[Amazon.com]";

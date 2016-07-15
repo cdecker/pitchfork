@@ -1,5 +1,7 @@
 /* these files need to be written in utf-8 */
+/* Translated by Christian Fischer (Contact: flyinghuman@web.de) */
 
+var LANG = new Object();
 // Messages
 LANG.VOLUME		='Lautstärke';
 LANG.BITRATE		='Bitrate: ';
@@ -7,6 +9,10 @@ LANG.POSITION		='Position: ';
 LANG.CROP		='Ausschneiden'; 
 LANG.CROP_SELECTION	="Selektierte ausschneiden";
 LANG.CLEAR_PLAYLIST	="Playlist leeren";
+
+LANG.PLAY		="Play"; //TODO: translate
+LANG.STOP		="Stop"; //TODO: translate
+
 
 LANG.WAIT_LOADING	="Lade.."; 
 LANG.WAIT_UPDATING_DB	="Aktualisiere Datenbank.."
@@ -34,19 +40,20 @@ LANG.NO			="Nein";
 LANG.BY_URL		="von URL";
 LANG.FROM_FILE		="von Datei";
 LANG.TEXT		="Text";
-LANG.OUTPUTS		="Ausgabe";
+LANG.OUTPUTS		="Ausgabe:";
 LANG.CLOSE		="Schließen";
 LANG.SAVE		="Speichern";
 LANG.REFETCH		="Erneuern";
 LANG.HIDE		="Verstecken";
 LANG.AUTOPLAY		="automatisch abspielen";
 LANG.NO_AUTOPLAY	="nicht automatisch abspielen";
-LANG.STREAMING		="Streaming;
+LANG.STREAMING		="Streaming";
 
 LANG.ANYTAG		="Jedes Feld";
 LANG.COMPOSER		="Verfasser";
 LANG.PERFORMER		="Darsteller"; 
 LANG.DATE		="Datum"; 
+
 
 LANG.PL_SAVE_AS 	="Speichere Playlist als: ";
 LANG.PL_SAVING		="Speichere Playlist";
@@ -67,14 +74,13 @@ LANG.JUMP_CURRENT	= "Springe zum aktuell spielenden Lied [Leertaste]";
 LANG.PAGINATION_FOLLOW	= "Folge aktuell gespieltes Lied";
 LANG.PAGINATION_NOFOLLOW= "Folge NICHT aktuell gespieltes Lied";
 
-LANG.LYRICWIKI_LYRIC	= "%s Songtexte von lyricwiki.org";  // add/edit lyric at ..
+LANG.LYRICWIKI_LYRIC	= "%s Songtexte von lyrics.wikia.com";  // add/edit lyric at ..
 
 // ERRORS
 LANG.E_CONNECT		="Verbindung mit dem MPD Server ist nicht möglich";
 LANG.E_INVALID_RESPONSE	="Server Antwortete ungültig";
 LANG.E_INVALID_RESULT	="Ungültiges Resultat vom Server";
 LANG.E_NO_RESPONSE	="Bekomme keine Antwort vom Server";
-LANG.E_CONNECT		="Verbindung mit mpd nicht möglich";
 LANG.E_INIT		="Initialisierung schlug fehl "
 LANG.E_INIT_PL		="Fehler beim initialisieren der Playlist";
 LANG.E_PL_MOVE		="Dehler beim verschieben in der Playlist";
@@ -94,6 +100,12 @@ LANG.E_MISSING_LYRICS	="Es scheint so, als würden die Liedtexte fehlen.."; // t
 LANG.E_LYRICS_FAILURE	="Die Abfrage der Liedtexte schluge fehl.";
 LANG.E_COMM_PROBLEM	="Verbindungsproblem";
 LANG.E_GET_INFO		="Kann keine Information erhalten";
+
+LANG.RECOMMEND_RECOMMENDATIONS	= "Recommendations "; //TODO: translate
+LANG.RECOMMEND_EMPTY_PLAYLIST	="To fetch recommendations based on your playlist you need to have something in your playlist"; //TODO: translate
+LANG.RECOMMEND_ADDTOPLAYLIST	="Add to playlist"; //TODO: translate
+LANG.RECOMMEND_SIMILAR		="Similar artists from your library"; //TODO: translate
+LANG.RECOMMEND_ARTISTS		="Recommended artists"; //TODO: translate
 
 
 /* Don't need translation, but needs to be here: */

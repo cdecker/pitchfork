@@ -1,6 +1,7 @@
 /* these files need to be written in utf-8 */
+/* Use this file as a template to add your own translation */
 
-var LANG = new Object(); 
+var LANG = new Object();
 // Messages
 LANG.VOLUME		='Volume';
 LANG.BITRATE		='Bitrate: ';
@@ -39,7 +40,7 @@ LANG.NO			="No";
 LANG.BY_URL		="By URL";
 LANG.FROM_FILE		="From file";
 LANG.TEXT		="Text";
-LANG.OUTPUTS		="Outputs";
+LANG.OUTPUTS		="Outputs:";
 LANG.CLOSE		="Close";
 LANG.SAVE		="Save";
 LANG.REFETCH		="Refetch";
@@ -73,14 +74,13 @@ LANG.JUMP_CURRENT	= "Jump to currently playing song [Space]";
 LANG.PAGINATION_FOLLOW	= "Following currently playing song";
 LANG.PAGINATION_NOFOLLOW= "Not following currently playing song";
 
-LANG.LYRICWIKI_LYRIC	= "%s lyric at lyricwiki.org";  // add/edit lyric at ..
+LANG.LYRICWIKI_LYRIC	= "%s lyric at lyrics.wikia.com";  // add/edit lyric at ..
 
 // ERRORS
 LANG.E_CONNECT		="Unable to connect to MPD server";
 LANG.E_INVALID_RESPONSE	="Server returned invalid response";
 LANG.E_INVALID_RESULT	="Invalid result from server";
 LANG.E_NO_RESPONSE	="Unable to get response from server";
-LANG.E_CONNECT		="Unable to connect to mpd";
 LANG.E_INIT		="Init failed "
 LANG.E_INIT_PL		="Failed to initialize playlist";
 LANG.E_PL_MOVE		="Moving in playlist failed";

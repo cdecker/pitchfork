@@ -1,5 +1,7 @@
 /* these files need to be written in utf-8 */
+/* Translated by Djanil */
 
+var LANG = new Object();
 // Messages
 LANG.VOLUME		='Volume';
 LANG.BITRATE		='Débit: ';
@@ -7,6 +9,10 @@ LANG.POSITION		='Position: ';
 LANG.CROP		='Conserver'; 
 LANG.CROP_SELECTION	="Ne conserver que la sélection";
 LANG.CLEAR_PLAYLIST	="Effacer la playlist";
+
+LANG.PLAY		="Play";
+LANG.STOP		="Stop";
+
 
 LANG.WAIT_LOADING	="Chargement.."; 
 LANG.WAIT_UPDATING_DB	="MAJ de la base de données.."
@@ -34,7 +40,7 @@ LANG.NO			="Non";
 LANG.BY_URL		="Par URL";
 LANG.FROM_FILE		="À partir d'un fichier";
 LANG.TEXT		="Texte";
-LANG.OUTPUTS		="Sortie";
+LANG.OUTPUTS		="Sortie:";
 LANG.CLOSE		="Fermer";
 LANG.SAVE		="Enregistrer";
 LANG.REFETCH		="Récupérer à nouveau";
@@ -68,14 +74,13 @@ LANG.JUMP_CURRENT	= "Aller à la chanson en cours [Espace]";
 LANG.PAGINATION_FOLLOW	= "Suivre la chanson en cours";
 LANG.PAGINATION_NOFOLLOW= "Ne pas suivre la chanson en cours";
 
-LANG.LYRICWIKI_LYRIC	= "paroles de %s sur lyricwiki.org";  // add/edit lyric at ..
+LANG.LYRICWIKI_LYRIC	= "paroles de %s sur lyrics.wikia.com";  // add/edit lyric at ..
 
 // ERRORS
 LANG.E_CONNECT		="Impossible de se connecter au serveur MPD";
 LANG.E_INVALID_RESPONSE	="Le serveur a renvoyé une réponse non valide";
 LANG.E_INVALID_RESULT	="Résultat non valide du serveur";
 LANG.E_NO_RESPONSE	="Impossible d'avoir une réponse du serveur";
-LANG.E_CONNECT		="Impossible de se connecter à mpd";
 LANG.E_INIT		="Init a échoué "
 LANG.E_INIT_PL		="L'initialisation de la playlist a échoué";
 LANG.E_PL_MOVE		="Le déplacement dans la playlist a échoué";
@@ -95,6 +100,12 @@ LANG.E_MISSING_LYRICS	="Les paroles semblent manquantes.."; // this should be so
 LANG.E_LYRICS_FAILURE	="L'extraction des paroles a échouée";
 LANG.E_COMM_PROBLEM	="Problème de communication";
 LANG.E_GET_INFO		="Récupération d'infos impossible";
+
+LANG.RECOMMEND_RECOMMENDATIONS	= "Recommendations "; //TODO: translate
+LANG.RECOMMEND_EMPTY_PLAYLIST	="To fetch recommendations based on your playlist you need to have something in your playlist"; //TODO: translate
+LANG.RECOMMEND_ADDTOPLAYLIST	="Add to playlist"; //TODO: translate
+LANG.RECOMMEND_SIMILAR		="Similar artists from your library"; //TODO: translate
+LANG.RECOMMEND_ARTISTS		="Recommended artists"; //TODO: translate
 
 
 /* Don't need translation, but needs to be here: */
